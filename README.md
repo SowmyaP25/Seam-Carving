@@ -43,3 +43,59 @@ When generating energy map, the region protected by mask are weighted with a ver
 ### Scaling up 
 ![animation image size expansion](https://github.com/vivianhylee/seam-carving/raw/master/example/image7_video.gif)
 
+##################################################
+
+# Common using OpenCV
+
+### 1. Key Modules:
+
+- **homotrans**: Provides functions for homography transformation.
+- **lookat**: Computes the rotation matrix and translation vector for a given camera position and target.
+- **rect2rect_mtx**: Computes the transformation matrix from one rectangle to another.
+- **make_cmap**: Creates a colormap for visualization.
+
+### 2. Classes:
+
+- **Bunch**: A simple class for creating objects with arbitrary attributes.
+- **Sketcher**: A class for sketching lines on images using OpenCV.
+
+### 3. Functions:
+
+- **splitfn**: Splits a filename into path, name, and extension.
+- **anorm**: Computes the Euclidean norm of a vector.
+- **clock**: Returns the current time in milliseconds.
+- **draw_keypoints**: Draws keypoints on an image.
+
+#######################################################
+
+# Image Masking using OpenCV
+
+This project demonstrates how to mask an object within an image using OpenCV. Masking involves creating a binary image that separates the object of interest from the background, allowing for selective processing or manipulation.
+
+## Overview
+
+The project performs the following steps:
+1. Loads an input image.
+2. Allows the user to sketch a mask to identify the region of interest.
+3. Creates a binary mask based on the sketch.
+4. Applies the mask to the original image to extract the colored portion of the object.
+5. Combines the colored portion with the grayscale portion of the image outside the mask.
+6. Saves the masked output image and displays it.
+
+## Usage
+
+### Dependencies
+
+- OpenCV
+- NumPy
+- Matplotlib (for visualization)
+
+### Running the Program
+
+1. Ensure you have Python installed along with the required dependencies.
+2. Run the program with the command:
+
+```bash
+python image_masking.py [input_image]
+
+
